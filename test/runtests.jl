@@ -1,5 +1,6 @@
 using XorPkg
 using Test
+using BenchmarkTools
 
 @testset "XorPkg.jl" begin
     # Write your tests here.
@@ -9,6 +10,5 @@ using Test
     inb = rand(UInt64, 10)
 
     forXor(output, ina, inb)
-    print(output)
     @test output == ina .⊻ inb 
 end
